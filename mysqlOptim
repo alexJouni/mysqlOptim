@@ -1,0 +1,15 @@
+#!/bin/bash
+
+if [ -z $1 ]
+then
+echo "require an .sql file! ";
+
+else
+	if [[ -f $1 ]]
+	then
+	sed -i '1s/^/SET AUTOCOMMIT = 0; \n SET FOREIGN_KEY_CHECKS=0;\n /'  $1;
+	sed -i -e "$ a SET FOREIGN_KEY_CHECKS = 1;\nCOMMIT;\nSET AUTOCOMMIT = 1;\n" $1; 
+	else
+	echo  $1 "file not found";
+	fi
+fi

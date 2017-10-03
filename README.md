@@ -4,7 +4,7 @@ Speed up your mysql import
 # Installation
 
 git clone https://github.com/alexJouni/mysqlOptim.git
-https://github.com/alexJouni/mysqlOptim.git
+
 
 #Copy mysqlOptin to /usr/local/bin
 

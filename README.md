@@ -19,7 +19,9 @@ $mysqlOptim  file.sql
 #Export/import database :
 
 mysqldump --opt  -q -u=username -p database > dumbfile.sql;
+
 mysqlOptim  dumbfile.sql;
+
 mysql --user=username --password database < dumpfile.sql
 
 
